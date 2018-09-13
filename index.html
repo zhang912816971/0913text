@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jQuery.js"></script>
+
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.box{
+		width: 100%;
+		height: 1100px;
+		background: url("1.jpg")no-repeat center;
+		background-size: 1000px 1100px;
+	}
+</style>
+<body>
+	<div class="box">
+		
+	</div>
+</body>
+</html>
+<script>
+	$('.box').click(function(event){
+		let speech = window.speechSynthesis;
+		let speechset = new SpeechSynthesisUtterance();
+		let text = "闫玉茹，如果，你的前男友，和你的现男友，同时掉进水里，我 ，，不会做你男朋友，，，略略略"
+		speechset.text = text;
+		speech.speak(speechset);	
+	});
+</script>
